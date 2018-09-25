@@ -1,0 +1,6 @@
+4.2.8p12
+bison
+intltool-dev
+libcap-dev
+pkgconfig(zlib)
+ruby

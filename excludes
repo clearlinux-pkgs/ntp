@@ -1,0 +1,26 @@
+# we don't want to ship ntpd.. we use chrony instead
+# we do however want ntpdate
+
+/usr/bin/calc_tickadj
+/usr/bin/ntp-keygen
+/usr/bin/ntp-wait
+/usr/bin/ntpd
+/usr/bin/ntpdc
+/usr/bin/ntpq
+/usr/bin/ntptime
+/usr/bin/ntptrace
+/usr/bin/sntp
+/usr/bin/tickadj
+/usr/bin/update-leap
+/usr/share/ntp/lib/NTP/Util.pm
+/usr/share/man/man1/calc_tickadj.1
+/usr/share/man/man1/ntp-keygen.1
+/usr/share/man/man1/ntp-wait.1
+/usr/share/man/man1/ntpd.1
+/usr/share/man/man1/ntpdc.1
+/usr/share/man/man1/ntpq.1
+/usr/share/man/man1/ntptrace.1
+/usr/share/man/man1/sntp.1
+/usr/share/man/man1/update-leap.1
+/usr/share/man/man5/ntp.conf.5
+/usr/share/man/man5/ntp.keys.5
