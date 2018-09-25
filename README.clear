@@ -1,0 +1,2 @@
+Note that this package is only for providing "ntpdate"
+We use chrony by strong preference for serving ntp.
