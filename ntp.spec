@@ -4,7 +4,7 @@
 #
 Name     : ntp
 Version  : 4.2.8p13
-Release  : 2
+Release  : 3
 URL      : http://www.eecis.udel.edu/~ntp/ntp_spool/ntp4/ntp-4.2/ntp-4.2.8p13.tar.gz
 Source0  : http://www.eecis.udel.edu/~ntp/ntp_spool/ntp4/ntp-4.2/ntp-4.2.8p13.tar.gz
 Summary  : libevent_pthreads adds pthreads-based threading support to libevent
