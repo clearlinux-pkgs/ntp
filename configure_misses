@@ -4,6 +4,9 @@ Configure miss: to see if we need ylwrap VPATH hack
 Configure miss: sys/procset.h usability
 Configure miss: sys/procset.h presence
 Configure miss: sys/procset.h
+Configure miss: sys/stropts.h usability
+Configure miss: sys/stropts.h presence
+Configure miss: sys/stropts.h
 Configure miss: runetype.h
 Configure miss: uint_t
 Configure miss: pathfind in -lgen
@@ -25,6 +28,7 @@ Configure miss: el_gets() with -leditline -lcurses
 Configure miss: readline() with -leditline -lncurses
 Configure miss: el_gets() with -leditline -lncurses
 Configure miss: getclock
+Configure miss: stime
 Configure miss: library containing snprintb
 Configure miss: sys/timers.h usability
 Configure miss: sys/timers.h presence
@@ -53,9 +57,11 @@ Configure miss: if we should use /dev/clockctl
 Configure miss: priv.h usability
 Configure miss: priv.h presence
 Configure miss: priv.h
+Configure miss: if we have solaris privileges
 Configure miss: sys/mac.h usability
 Configure miss: sys/mac.h presence
 Configure miss: sys/mac.h
+Configure miss: if we should use TrustedBSD MAC privileges
 Configure miss: library containing res_init
 Configure miss: res_init
 Configure miss: int32
@@ -67,7 +73,6 @@ Configure miss: md5.h
 Configure miss: library containing MD5Init
 Configure miss: MD5Init
 Configure miss: sigvec
-Configure miss: if we want to use SIGIO
 Configure miss: if we can use SIGPOLL for UDP I/O
 Configure miss: if we can use SIGPOLL for TTY I/O
 Configure miss: deprecated --with-arlib
@@ -117,6 +122,9 @@ Configure miss: machine/soundcard.h
 Configure miss: sys/stream.h usability
 Configure miss: sys/stream.h presence
 Configure miss: sys/stream.h
+Configure miss: stropts.h usability
+Configure miss: stropts.h presence
+Configure miss: stropts.h
 Configure miss: sys/syssgi.h usability
 Configure miss: sys/syssgi.h presence
 Configure miss: sys/syssgi.h
@@ -228,6 +236,7 @@ Configure miss: el_gets() with -leditline -lcurses
 Configure miss: readline() with -leditline -lncurses
 Configure miss: el_gets() with -leditline -lncurses
 Configure miss: getclock
+Configure miss: stime
 Configure miss: library containing snprintb
 Configure miss: sys/timers.h usability
 Configure miss: sys/timers.h presence
@@ -256,9 +265,11 @@ Configure miss: if we should use /dev/clockctl
 Configure miss: priv.h usability
 Configure miss: priv.h presence
 Configure miss: priv.h
+Configure miss: if we have solaris privileges
 Configure miss: sys/mac.h usability
 Configure miss: sys/mac.h presence
 Configure miss: sys/mac.h
+Configure miss: if we should use TrustedBSD MAC privileges
 Configure miss: library containing res_init
 Configure miss: res_init
 Configure miss: int32
@@ -270,12 +281,14 @@ Configure miss: md5.h
 Configure miss: library containing MD5Init
 Configure miss: MD5Init
 Configure miss: sigvec
-Configure miss: if we want to use SIGIO
 Configure miss: if we can use SIGPOLL for UDP I/O
 Configure miss: if we can use SIGPOLL for TTY I/O
 Configure miss: sys/procset.h usability
 Configure miss: sys/procset.h presence
 Configure miss: sys/procset.h
+Configure miss: sys/stropts.h usability
+Configure miss: sys/stropts.h presence
+Configure miss: sys/stropts.h
 Configure miss: runetype.h
 Configure miss: uint_t
 Configure miss: pathfind in -lgen
@@ -295,23 +308,3 @@ Configure miss: struct sockaddr for sa_len
 Configure miss: Kame IPv6 support
 Configure miss: struct if_laddrconf
 Configure miss: struct if_laddrreq
-Configure miss: WIN32
-Configure miss: CYGWIN
-Configure miss: netinet/in6.h usability
-Configure miss: netinet/in6.h presence
-Configure miss: netinet/in6.h
-Configure miss: port.h usability
-Configure miss: port.h presence
-Configure miss: port.h
-Configure miss: sys/devpoll.h usability
-Configure miss: sys/devpoll.h presence
-Configure miss: sys/devpoll.h
-Configure miss: sys/event.h usability
-Configure miss: sys/event.h presence
-Configure miss: sys/event.h
-Configure miss: whether KERN_ARND is declared
-Configure miss: arc4random
-Configure miss: port_create
-Configure miss: struct sockaddr_in6.sin6_len
-Configure miss: struct sockaddr_storage.__ss_family
-Configure miss: struct so_linger

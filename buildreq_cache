@@ -1,6 +1,7 @@
-4.2.8p12
+4.2.8p14
 bison
 intltool-dev
 libcap-dev
+pkgconfig(libevent_pthreads)
 pkgconfig(zlib)
 ruby
