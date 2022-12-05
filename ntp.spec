@@ -4,7 +4,7 @@
 #
 Name     : ntp
 Version  : 4.2.8p15
-Release  : 6
+Release  : 7
 URL      : http://archive.ntp.org/ntp4/ntp-4.2/ntp-4.2.8p15.tar.gz
 Source0  : http://archive.ntp.org/ntp4/ntp-4.2/ntp-4.2.8p15.tar.gz
 Summary  : libevent_pthreads adds pthreads-based threading support to libevent
@@ -19,6 +19,7 @@ BuildRequires : pkgconfig(libevent_pthreads)
 BuildRequires : pkgconfig(zlib)
 BuildRequires : ruby
 BuildRequires : sed
+Patch1: ntp-4.2.8p15-fix-build-for-dynamic-stack-size-glibc-2.34-and-greater.patch
 
 %description
 Submit patches, bug reports, and enhancement requests via
@@ -53,13 +54,14 @@ license components for the ntp package.
 %prep
 %setup -q -n ntp-4.2.8p15
 cd %{_builddir}/ntp-4.2.8p15
+%patch1 -p1
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1596503362
+export SOURCE_DATE_EPOCH=1670261225
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$FFLAGS -fno-lto "
@@ -76,41 +78,41 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make VERBOSE=1 V=1 %{?_smp_mflags} check CFLAGS+="-fcommon -Wp,-D_FORTIFY_SOURCE=0"
 
 %install
-export SOURCE_DATE_EPOCH=1596503362
+export SOURCE_DATE_EPOCH=1670261225
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/ntp
-cp %{_builddir}/ntp-4.2.8p15/COPYRIGHT %{buildroot}/usr/share/package-licenses/ntp/2209cf7c235e8a8e705c123b33c03707f47b9049
-cp %{_builddir}/ntp-4.2.8p15/libjsmn/LICENSE %{buildroot}/usr/share/package-licenses/ntp/7b20de0c23cbc9a17c3af51ddac5c3ad8182f8b1
-cp %{_builddir}/ntp-4.2.8p15/sntp/COPYRIGHT %{buildroot}/usr/share/package-licenses/ntp/2209cf7c235e8a8e705c123b33c03707f47b9049
-cp %{_builddir}/ntp-4.2.8p15/sntp/libevent/LICENSE %{buildroot}/usr/share/package-licenses/ntp/0f375374b877550ade2e001905a1f9c9b7128714
-cp %{_builddir}/ntp-4.2.8p15/sntp/libopts/COPYING.gplv3 %{buildroot}/usr/share/package-licenses/ntp/e8353ab286a6bcbb218d9df15d8aa68346ef5cf0
-cp %{_builddir}/ntp-4.2.8p15/sntp/libopts/COPYING.lgplv3 %{buildroot}/usr/share/package-licenses/ntp/8ca3cbd336e9a13d5ee05753567d9261af4066a3
-cp %{_builddir}/ntp-4.2.8p15/sntp/libopts/COPYING.mbsd %{buildroot}/usr/share/package-licenses/ntp/76f15ccf78ed039d563200c8db64f85d17c3d7cb
+cp %{_builddir}/ntp-%{version}/COPYRIGHT %{buildroot}/usr/share/package-licenses/ntp/2209cf7c235e8a8e705c123b33c03707f47b9049
+cp %{_builddir}/ntp-%{version}/libjsmn/LICENSE %{buildroot}/usr/share/package-licenses/ntp/7b20de0c23cbc9a17c3af51ddac5c3ad8182f8b1
+cp %{_builddir}/ntp-%{version}/sntp/COPYRIGHT %{buildroot}/usr/share/package-licenses/ntp/2209cf7c235e8a8e705c123b33c03707f47b9049
+cp %{_builddir}/ntp-%{version}/sntp/libevent/LICENSE %{buildroot}/usr/share/package-licenses/ntp/0f375374b877550ade2e001905a1f9c9b7128714
+cp %{_builddir}/ntp-%{version}/sntp/libopts/COPYING.gplv3 %{buildroot}/usr/share/package-licenses/ntp/e8353ab286a6bcbb218d9df15d8aa68346ef5cf0
+cp %{_builddir}/ntp-%{version}/sntp/libopts/COPYING.lgplv3 %{buildroot}/usr/share/package-licenses/ntp/8ca3cbd336e9a13d5ee05753567d9261af4066a3
+cp %{_builddir}/ntp-%{version}/sntp/libopts/COPYING.mbsd %{buildroot}/usr/share/package-licenses/ntp/76f15ccf78ed039d563200c8db64f85d17c3d7cb
 %make_install
 ## Remove excluded files
-rm -f %{buildroot}/usr/bin/calc_tickadj
-rm -f %{buildroot}/usr/bin/ntp-keygen
-rm -f %{buildroot}/usr/bin/ntp-wait
-rm -f %{buildroot}/usr/bin/ntpd
-rm -f %{buildroot}/usr/bin/ntpdc
-rm -f %{buildroot}/usr/bin/ntpq
-rm -f %{buildroot}/usr/bin/ntptime
-rm -f %{buildroot}/usr/bin/ntptrace
-rm -f %{buildroot}/usr/bin/sntp
-rm -f %{buildroot}/usr/bin/tickadj
-rm -f %{buildroot}/usr/bin/update-leap
-rm -f %{buildroot}/usr/share/ntp/lib/NTP/Util.pm
-rm -f %{buildroot}/usr/share/man/man1/calc_tickadj.1
-rm -f %{buildroot}/usr/share/man/man1/ntp-keygen.1
-rm -f %{buildroot}/usr/share/man/man1/ntp-wait.1
-rm -f %{buildroot}/usr/share/man/man1/ntpd.1
-rm -f %{buildroot}/usr/share/man/man1/ntpdc.1
-rm -f %{buildroot}/usr/share/man/man1/ntpq.1
-rm -f %{buildroot}/usr/share/man/man1/ntptrace.1
-rm -f %{buildroot}/usr/share/man/man1/sntp.1
-rm -f %{buildroot}/usr/share/man/man1/update-leap.1
-rm -f %{buildroot}/usr/share/man/man5/ntp.conf.5
-rm -f %{buildroot}/usr/share/man/man5/ntp.keys.5
+rm -f %{buildroot}*/usr/bin/calc_tickadj
+rm -f %{buildroot}*/usr/bin/ntp-keygen
+rm -f %{buildroot}*/usr/bin/ntp-wait
+rm -f %{buildroot}*/usr/bin/ntpd
+rm -f %{buildroot}*/usr/bin/ntpdc
+rm -f %{buildroot}*/usr/bin/ntpq
+rm -f %{buildroot}*/usr/bin/ntptime
+rm -f %{buildroot}*/usr/bin/ntptrace
+rm -f %{buildroot}*/usr/bin/sntp
+rm -f %{buildroot}*/usr/bin/tickadj
+rm -f %{buildroot}*/usr/bin/update-leap
+rm -f %{buildroot}*/usr/share/ntp/lib/NTP/Util.pm
+rm -f %{buildroot}*/usr/share/man/man1/calc_tickadj.1
+rm -f %{buildroot}*/usr/share/man/man1/ntp-keygen.1
+rm -f %{buildroot}*/usr/share/man/man1/ntp-wait.1
+rm -f %{buildroot}*/usr/share/man/man1/ntpd.1
+rm -f %{buildroot}*/usr/share/man/man1/ntpdc.1
+rm -f %{buildroot}*/usr/share/man/man1/ntpq.1
+rm -f %{buildroot}*/usr/share/man/man1/ntptrace.1
+rm -f %{buildroot}*/usr/share/man/man1/sntp.1
+rm -f %{buildroot}*/usr/share/man/man1/update-leap.1
+rm -f %{buildroot}*/usr/share/man/man5/ntp.conf.5
+rm -f %{buildroot}*/usr/share/man/man5/ntp.keys.5
 
 %files
 %defattr(-,root,root,-)
