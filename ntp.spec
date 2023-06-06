@@ -4,10 +4,10 @@
 # Using build pattern: configure
 #
 Name     : ntp
-Version  : 4.2.8p16
-Release  : 8
-URL      : https://archive.ntp.org/ntp4/ntp-4.2/ntp-4.2.8p16.tar.gz
-Source0  : https://archive.ntp.org/ntp4/ntp-4.2/ntp-4.2.8p16.tar.gz
+Version  : 4.2.8p17
+Release  : 9
+URL      : https://archive.ntp.org/ntp4/ntp-4.2/ntp-4.2.8p17.tar.gz
+Source0  : https://archive.ntp.org/ntp4/ntp-4.2/ntp-4.2.8p17.tar.gz
 Summary  : libevent_pthreads adds pthreads-based threading support to libevent
 Group    : Development/Tools
 License  : BSD-3-Clause GPL-3.0 LGPL-3.0 MIT
@@ -56,15 +56,15 @@ license components for the ntp package.
 
 
 %prep
-%setup -q -n ntp-4.2.8p16
-cd %{_builddir}/ntp-4.2.8p16
+%setup -q -n ntp-4.2.8p17
+cd %{_builddir}/ntp-4.2.8p17
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1685656752
+export SOURCE_DATE_EPOCH=1686076541
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
 export FCFLAGS="$FFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
@@ -81,7 +81,7 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make VERBOSE=1 V=1 %{?_smp_mflags} check CFLAGS+="-fcommon -Wp,-D_FORTIFY_SOURCE=0"
 
 %install
-export SOURCE_DATE_EPOCH=1685656752
+export SOURCE_DATE_EPOCH=1686076541
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/ntp
 cp %{_builddir}/ntp-%{version}/libjsmn/LICENSE %{buildroot}/usr/share/package-licenses/ntp/7b20de0c23cbc9a17c3af51ddac5c3ad8182f8b1 || :
