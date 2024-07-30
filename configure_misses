@@ -4,24 +4,28 @@ Configure miss: Diem Computime Radio Clock
 Configure miss: ELV/DCF7000 clock
 Configure miss: GNU Pth pthread.h
 Configure miss: GNU Pth pthread.h
+Configure miss: GNU Pth pthread.h
 Configure miss: HOPF 6021 clock
 Configure miss: KSI/Odetics TPRO/S GPS receiver/IRIG interface
 Configure miss: Kame IPv6 support
 Configure miss: Kame IPv6 support
+Configure miss: Kame IPv6 support
+Configure miss: LinuxThreads consistency
 Configure miss: LinuxThreads consistency
 Configure miss: LinuxThreads consistency
 Configure miss: LinuxThreads implementation
 Configure miss: LinuxThreads implementation
+Configure miss: LinuxThreads implementation
 Configure miss: LinuxThreads pthread.h
 Configure miss: LinuxThreads pthread.h
+Configure miss: LinuxThreads pthread.h
+Configure miss: MD5Init
 Configure miss: MD5Init
 Configure miss: MD5Init
 Configure miss: Magnavox MX4200 GPS receiver
 Configure miss: Meinberg clocks
 Configure miss: ONCORE Motorola VP/UT Oncore GPS
 Configure miss: PCL720 clock support
-Configure miss: RAND_bytes
-Configure miss: RAND_poll
 Configure miss: RCC 8000 clock
 Configure miss: RIPENCC specific Trimble driver
 Configure miss: Rockwell Jupiter GPS receiver
@@ -38,37 +42,50 @@ Configure miss: VARITEXT clock
 Configure miss: WHARTON 400A Series clock
 Configure miss: _beginthread
 Configure miss: _beginthread
+Configure miss: _beginthread
 Configure miss: a minimum recommended value of tickadj
 Configure miss: additional compiler flags
 Configure miss: additional compiler flags
+Configure miss: additional compiler flags
+Configure miss: additional linker flags
 Configure miss: additional linker flags
 Configure miss: additional linker flags
 Configure miss: atomic_thread_fence
 Configure miss: bstring.h
 Configure miss: default inclusion of all suitable PARSE clocks
-Configure miss: deprecated --with-arlib
 Configure miss: dns_sd.h
 Configure miss: el_gets() with -ledit -lcurses
 Configure miss: el_gets() with -ledit -lcurses
+Configure miss: el_gets() with -ledit -lcurses
+Configure miss: el_gets() with -ledit -lncurses
 Configure miss: el_gets() with -ledit -lncurses
 Configure miss: el_gets() with -ledit -lncurses
 Configure miss: el_gets() with -ledit -ltermcap
 Configure miss: el_gets() with -ledit -ltermcap
+Configure miss: el_gets() with -ledit -ltermcap
+Configure miss: el_gets() with -leditline -lcurses
 Configure miss: el_gets() with -leditline -lcurses
 Configure miss: el_gets() with -leditline -lcurses
 Configure miss: el_gets() with -leditline -lncurses
 Configure miss: el_gets() with -leditline -lncurses
+Configure miss: el_gets() with -leditline -lncurses
 Configure miss: el_gets() with -leditline -ltermcap
 Configure miss: el_gets() with -leditline -ltermcap
+Configure miss: el_gets() with -leditline -ltermcap
+Configure miss: gcc options needed to detect all undeclared functions
 Configure miss: gcc options needed to detect all undeclared functions
 Configure miss: gcc options needed to detect all undeclared functions
 Configure miss: getbootfile
 Configure miss: getclock
 Configure miss: getclock
+Configure miss: getclock
+Configure miss: gettext in -lintl
 Configure miss: gettext in -lintl
 Configure miss: gettext in -lintl
 Configure miss: if C99-snprintf replacement snprintf will be used
 Configure miss: if C99-snprintf replacement snprintf will be used
+Configure miss: if C99-snprintf replacement snprintf will be used
+Configure miss: if C99-snprintf replacement vsnprintf will be used
 Configure miss: if C99-snprintf replacement vsnprintf will be used
 Configure miss: if C99-snprintf replacement vsnprintf will be used
 Configure miss: if SIOCGIFCONF returns buffer size in the buffer
@@ -82,8 +99,11 @@ Configure miss: if we can make dcf parse utilities
 Configure miss: if we can read kmem
 Configure miss: if we can use SIGPOLL for TTY I/O
 Configure miss: if we can use SIGPOLL for TTY I/O
+Configure miss: if we can use SIGPOLL for TTY I/O
 Configure miss: if we can use SIGPOLL for UDP I/O
 Configure miss: if we can use SIGPOLL for UDP I/O
+Configure miss: if we can use SIGPOLL for UDP I/O
+Configure miss: if we have solaris privileges
 Configure miss: if we have solaris privileges
 Configure miss: if we have solaris privileges
 Configure miss: if we need a ctty for F_SETOWN
@@ -97,6 +117,8 @@ Configure miss: if we should step and slew the time
 Configure miss: if we should sync TODR clock every hour
 Configure miss: if we should use /dev/clockctl
 Configure miss: if we should use /dev/clockctl
+Configure miss: if we should use /dev/clockctl
+Configure miss: if we should use TrustedBSD MAC privileges
 Configure miss: if we should use TrustedBSD MAC privileges
 Configure miss: if we should use TrustedBSD MAC privileges
 Configure miss: if we should use the IRIG sawtooth filter
@@ -108,85 +130,101 @@ Configure miss: if we want support for Samba's signing daemon
 Configure miss: if we want the experimental leap smear code
 Configure miss: if we want to build ntpsnmpd
 Configure miss: if we want to build the NTPD simulator
-Configure miss: if we want to enable CMAC support
-Configure miss: if we want to include NTP Autokey protocol support
 Configure miss: if we want to use libseccomp sandboxing (EXPERIMENTAL)
-Configure miss: if we will use crypto
-Configure miss: if we will use crypto
 Configure miss: if we're including processing time debugging code
 Configure miss: int32
 Configure miss: int32
-Configure miss: int32 with DNS headers included
-Configure miss: int32 with DNS headers included
+Configure miss: int32
 Configure miss: interface list sysctl
 Configure miss: kvm.h
 Configure miss: library containing MD5Init
 Configure miss: library containing MD5Init
+Configure miss: library containing MD5Init
 Configure miss: library containing res_init
 Configure miss: library containing res_init
+Configure miss: library containing res_init
+Configure miss: library containing snprintb
 Configure miss: library containing snprintb
 Configure miss: library containing snprintb
 Configure miss: libscf.h
 Configure miss: machine/soundcard.h
 Configure miss: md5.h
 Configure miss: md5.h
+Configure miss: md5.h
 Configure miss: net-snmp-config
 Configure miss: net/if6.h
 Configure miss: net/if_var.h
 Configure miss: net/if_var.h
+Configure miss: net/if_var.h
 Configure miss: netinet/in_system.h
 Configure miss: netinet/in_system.h
+Configure miss: netinet/in_system.h
+Configure miss: netinet/in_var.h
 Configure miss: netinet/in_var.h
 Configure miss: netinet/in_var.h
 Configure miss: netinfo/ni.h
-Configure miss: openssl library directory
-Configure miss: openssl library directory
 Configure miss: pathfind in -lgen
 Configure miss: pathfind in -lgen
-Configure miss: pkg-config for libcrypto
-Configure miss: pkg-config for libcrypto
-Configure miss: pkg-config for openssl
-Configure miss: pkg-config for openssl
+Configure miss: pathfind in -lgen
 Configure miss: plock
 Configure miss: priv.h
 Configure miss: priv.h
+Configure miss: priv.h
+Configure miss: pthread_kill_other_threads_np
 Configure miss: pthread_kill_other_threads_np
 Configure miss: pthread_kill_other_threads_np
 Configure miss: pthread_yield
 Configure miss: pthread_yield
+Configure miss: pthread_yield
+Configure miss: readline() with -ledit
 Configure miss: readline() with -ledit
 Configure miss: readline() with -ledit
 Configure miss: readline() with -ledit -lcurses
 Configure miss: readline() with -ledit -lcurses
+Configure miss: readline() with -ledit -lcurses
+Configure miss: readline() with -ledit -lncurses
 Configure miss: readline() with -ledit -lncurses
 Configure miss: readline() with -ledit -lncurses
 Configure miss: readline() with -ledit -ltermcap
 Configure miss: readline() with -ledit -ltermcap
+Configure miss: readline() with -ledit -ltermcap
+Configure miss: readline() with -leditline
 Configure miss: readline() with -leditline
 Configure miss: readline() with -leditline
 Configure miss: readline() with -leditline -lcurses
 Configure miss: readline() with -leditline -lcurses
+Configure miss: readline() with -leditline -lcurses
+Configure miss: readline() with -leditline -lncurses
 Configure miss: readline() with -leditline -lncurses
 Configure miss: readline() with -leditline -lncurses
 Configure miss: readline() with -leditline -ltermcap
 Configure miss: readline() with -leditline -ltermcap
+Configure miss: readline() with -leditline -ltermcap
+Configure miss: res_init
 Configure miss: res_init
 Configure miss: res_init
 Configure miss: rtprio
 Configure miss: runetype.h
 Configure miss: runetype.h
+Configure miss: runetype.h
+Configure miss: s_char
 Configure miss: s_char
 Configure miss: s_char
 Configure miss: sigvec
 Configure miss: sigvec
+Configure miss: sigvec
 Configure miss: sockaddr_storage.__ss_family
 Configure miss: sockaddr_storage.__ss_family
+Configure miss: sockaddr_storage.__ss_family
+Configure miss: stime
 Configure miss: stime
 Configure miss: stime
 Configure miss: stropts.h
 Configure miss: struct clockinfo for hz
 Configure miss: struct if_laddrconf
 Configure miss: struct if_laddrconf
+Configure miss: struct if_laddrconf
+Configure miss: struct if_laddrreq
 Configure miss: struct if_laddrreq
 Configure miss: struct if_laddrreq
 Configure miss: struct ntptimeval.time.tv_nsec
@@ -195,35 +233,47 @@ Configure miss: struct rt_msghdr
 Configure miss: struct snd_size
 Configure miss: struct sockaddr for sa_len
 Configure miss: struct sockaddr for sa_len
+Configure miss: struct sockaddr for sa_len
 Configure miss: sun/audioio.h
 Configure miss: sys/audioio.h
 Configure miss: sys/clockctl.h
 Configure miss: sys/clockctl.h
+Configure miss: sys/clockctl.h
 Configure miss: sys/lock.h
+Configure miss: sys/mac.h
 Configure miss: sys/mac.h
 Configure miss: sys/mac.h
 Configure miss: sys/modem.h
 Configure miss: sys/ppsclock.h
 Configure miss: sys/ppstime.h
 Configure miss: sys/proc.h
+Configure miss: sys/procctl.h
+Configure miss: sys/procset.h
 Configure miss: sys/procset.h
 Configure miss: sys/procset.h
 Configure miss: sys/stream.h
 Configure miss: sys/stropts.h
 Configure miss: sys/stropts.h
+Configure miss: sys/stropts.h
+Configure miss: sys/sysctl.h
 Configure miss: sys/sysctl.h
 Configure miss: sys/sysctl.h
 Configure miss: sys/syssgi.h
 Configure miss: sys/systune.h
 Configure miss: sys/timepps.h
 Configure miss: sys/timepps.h
+Configure miss: sys/timepps.h
+Configure miss: sys/timers.h
 Configure miss: sys/timers.h
 Configure miss: sys/timers.h
 Configure miss: sys/tpro.h
 Configure miss: thr_getconcurrency
 Configure miss: thr_getconcurrency
+Configure miss: thr_getconcurrency
 Configure miss: thr_setconcurrency
 Configure miss: thr_setconcurrency
+Configure miss: thr_setconcurrency
+Configure miss: thr_yield
 Configure miss: thr_yield
 Configure miss: thr_yield
 Configure miss: timepps.h
@@ -231,12 +281,20 @@ Configure miss: timex.h
 Configure miss: to see if we need ylwrap VPATH hack
 Configure miss: u_int32
 Configure miss: u_int32
-Configure miss: u_int32 with DNS headers included
-Configure miss: u_int32 with DNS headers included
+Configure miss: u_int32
+Configure miss: uint_t
 Configure miss: uint_t
 Configure miss: uint_t
 Configure miss: whether a reg expr header is specified
+Configure miss: whether a reg expr header is specified
+Configure miss: whether pathfind(3) works
 Configure miss: whether pathfind(3) works
 Configure miss: whether with-libregex was specified
+Configure miss: whether with-libregex was specified
+Configure miss: whether with-libregex-cflags was specified
 Configure miss: whether with-libregex-cflags was specified
 Configure miss: whether with-libregex-libs was specified
+Configure miss: whether with-libregex-libs was specified
+Configure miss: x86_64-generic-linux-gnu-file
+Configure miss: x86_64-generic-linux-gnu-file
+Configure miss: x86_64-generic-linux-gnu-file

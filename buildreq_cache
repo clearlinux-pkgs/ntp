@@ -1,7 +1,10 @@
-4.2.8p17
+4.2.8p18
 bison
+file
 intltool-dev
 libcap-dev
+openssl-dev
+pkgconfig(libcrypto)
 pkgconfig(libevent_pthreads)
-pkgconfig(zlib)
+pkgconfig(openssl)
 ruby
